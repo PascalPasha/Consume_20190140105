@@ -1,13 +1,14 @@
+import 'package:consumeapi/register.dart';
 import 'package:flutter/material.dart';
 
-class HalamanPertama extends StatefulWidget {
-  const HalamanPertama({Key? key}) : super(key: key);
+class DataMahasiswa extends StatefulWidget {
+  const DataMahasiswa({Key? key}) : super(key: key);
 
   @override
-  _HalamanPertamaState createState() => _HalamanPertamaState();
+  _DataMahasiswaState createState() => _DataMahasiswaState();
 }
 
-class _HalamanPertamaState extends State<HalamanPertama> {
+class _DataMahasiswaState extends State<DataMahasiswa> {
   final minimumPadding = 5.0;
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,10 @@ class _HalamanPertamaState extends State<HalamanPertama> {
             ),
             ListTile(
               title: Text('Register Mahasiswa'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Register()));
+              },
             ),
             ListTile(
               title: Text('Get Mahasiswa'),
