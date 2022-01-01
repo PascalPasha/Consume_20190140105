@@ -1,3 +1,4 @@
+import 'package:consumeapi/getmahasiswa.dart';
 import 'package:consumeapi/register.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,10 @@ class _DataMahasiswaState extends State<DataMahasiswa> {
             ),
             ListTile(
               title: Text('Get Mahasiswa'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => getmahasiswa()));
+              },
             )
           ],
         ),
